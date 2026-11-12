@@ -15,9 +15,9 @@
       <div>MiniShopping</div>
     </div>
     <div class="main-nav" aria-label="Điều hướng chính">
-      <div class="active">Danh sách</div>
-      <div>Đã xong</div>
-      <div>Hướng dẫn</div>
+      <button type="button" class="active">Danh sách</button>
+      <button type="button">Đã xong</button>
+      <button type="button">Hướng dẫn</button>
     </div>
   </div>
 
@@ -28,47 +28,67 @@
     </div>
 
     <div class="add-form" aria-label="Thêm món cần mua">
-      <div class="form-input">Nhập tên món</div>
-      <div class="form-input">Giá dự kiến</div>
-      <div id="btn-add" class="button">Thêm món</div>
+      <input type="text" class="form-input" placeholder="Nhập tên món" aria-label="Tên món" required />
+      <input type="number" class="form-input" placeholder="Giá dự kiến" aria-label="Giá dự kiến" min="0" step="1" required />
+      <button type="button" id="btn-add" class="button">Thêm món</button>
     </div>
 
     <div class="filters" aria-label="Lọc danh sách mua sắm">
-      <div class="button active">Tất cả</div>
-      <div class="button">Chưa mua</div>
-      <div class="button">Đã mua</div>
+      <button type="button" class="button active">Tất cả</button>
+      <button type="button" class="button">Chưa mua</button>
+      <button type="button" class="button">Đã mua</button>
     </div>
 
     <div id="item-list" class="item-list" aria-label="Các món cần mua">
       <div class="item">
-        <div class="item-label"><div class="checkbox"></div><div class="item-name">Sữa
-            tươi</div></div>
-        <div class="item-price">32.000 <div class="currency">đ</div></div>
-        <div class="button delete" aria-label="Xóa Sữa tươi">Xóa</div>
+        <div class="item-label">
+          <input type="checkbox" class="checkbox" aria-label="Đã mua Sữa tươi" />
+          <div class="item-name">Sữa
+            tươi</div>
+        </div>
+        <div class="item-price">32000 <div class="currency">đ</div>
+        </div>
+        <button type="button" class="button delete" aria-label="Xóa Sữa tươi">Xóa</button>
       </div>
       <div id="completed-items" class="item">
-        <div class="item-label"><div class="checkbox checked"></div><div class="item-name">Trứng
-            gà</div></div>
-        <div class="item-price">45.000 <div class="currency">đ</div></div>
-        <div class="button delete" aria-label="Xóa Trứng gà">Xóa</div>
+        <div class="item-label">
+          <input type="checkbox" class="checkbox" aria-label="Đã mua Trứng gà" checked />
+          <div class="item-name">Trứng
+            gà</div>
+        </div>
+        <div class="item-price">45000 <div class="currency">đ</div>
+        </div>
+        <button type="button" class="button delete" aria-label="Xóa Trứng gà">Xóa</button>
       </div>
       <div class="item">
-        <div class="item-label"><div class="checkbox"></div><div class="item-name">Rau
-            cải</div></div>
-        <div class="item-price">18.000 <div class="currency">đ</div></div>
-        <div class="button delete" aria-label="Xóa Rau cải">Xóa</div>
+        <div class="item-label">
+          <input type="checkbox" class="checkbox" aria-label="Đã mua Rau cải" />
+          <div class="item-name">Rau
+            cải</div>
+        </div>
+        <div class="item-price">18000 <div class="currency">đ</div>
+        </div>
+        <button type="button" class="button delete" aria-label="Xóa Rau cải">Xóa</button>
       </div>
       <div class="item">
-        <div class="item-label"><div class="checkbox"></div><div class="item-name">Bánh
-            mì</div></div>
-        <div class="item-price">20.000 <div class="currency">đ</div></div>
-        <div class="button delete" aria-label="Xóa Bánh mì">Xóa</div>
+        <div class="item-label">
+          <input type="checkbox" class="checkbox" aria-label="Đã mua Bánh mì" />
+          <div class="item-name">Bánh
+            mì</div>
+        </div>
+        <div class="item-price">20000 <div class="currency">đ</div>
+        </div>
+        <button type="button" class="button delete" aria-label="Xóa Bánh mì">Xóa</button>
       </div>
     </div>
 
     <div class="summary">
-      <div class="remaining"><div>Còn <div class="emphasis">3</div> món chưa mua</div></div>
-      <div>Tổng dự kiến: <div class="emphasis total">70.000 <div class="currency">đ</div></div></div>
+      <div class="remaining">
+        <div>Còn <div class="emphasis">3</div> món chưa mua</div>
+      </div>
+      <div>Tổng dự kiến: <div class="emphasis total">70.000 <div class="currency">đ</div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

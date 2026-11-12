@@ -29,7 +29,9 @@ body {
   color: inherit;
   text-decoration: none;
 }
-.button:focus-visible {
+.button:focus-visible,
+.main-nav > button:focus-visible,
+.checkbox:focus-visible {
   outline: 2px solid #2860e8;
   outline-offset: 3px;
 }
@@ -57,7 +59,11 @@ body {
   gap: 4px;
   white-space: nowrap;
 }
-.main-nav > div {
+.main-nav > button {
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
   padding: 7px 12px;
   border-radius: 8px;
   font-size: 14px;
@@ -70,7 +76,7 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
-.main-nav > div:hover {
+.main-nav > button:hover {
   background: #e9eaec;
 }
 
@@ -111,6 +117,7 @@ body {
   background: #fff;
   color: #1c1f20;
   box-shadow: 0 2px 3px #1c1f2005;
+  border: 1px solid lightgray;
 }
 .add-form .form-input:nth-child(2) {
   flex: 1.4;
@@ -175,6 +182,7 @@ body {
   cursor: pointer;
 }
 .checkbox {
+  appearance: none;
   display: grid;
   place-content: center;
   flex-shrink: 0;
@@ -186,10 +194,10 @@ body {
   background: #e6e7e9;
   cursor: pointer;
 }
-.checkbox.checked {
+.checkbox:checked {
   background: #2860e8;
 }
-.checkbox.checked::after {
+.checkbox:checked::after {
   content: "";
   width: 9px;
   height: 5px;
@@ -225,14 +233,14 @@ body {
   background: #e9eaec;
   color: #b42318;
 }
-.item:has(.checkbox.checked) {
+.item:has(.checkbox:checked) {
   background: #f7f7f9;
 }
-.item:has(.checkbox.checked) .item-name {
+.item:has(.checkbox:checked) .item-name {
   color: #717582;
   text-decoration: line-through;
 }
-.item:has(.checkbox.checked) .item-price {
+.item:has(.checkbox:checked) .item-price {
   color: #717582;
 }
 
@@ -275,7 +283,7 @@ body {
   .main-nav {
     margin-left: auto;
   }
-  .main-nav > div {
+  .main-nav > button {
     padding-inline: 10px;
   }
   .shopping-app {
