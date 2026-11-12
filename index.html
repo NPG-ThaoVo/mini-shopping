@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiniShopping — Danh sách mua sắm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="site-header">
+    <div class="brand" aria-label="MiniShopping — Trang chủ">
+      <div>MiniShopping</div>
+    </div>
+    <div class="main-nav" aria-label="Điều hướng chính">
+      <div class="active">Danh sách</div>
+      <div>Đã xong</div>
+      <div>Hướng dẫn</div>
+    </div>
+  </div>
+
+  <div class="shopping-app">
+    <div class="page-header">
+      <div class="page-title">Danh sách mua sắm</div>
+      <div class="page-description">Theo dõi những món bạn cần mua.</div>
+    </div>
+
+    <div class="add-form" aria-label="Thêm món cần mua">
+      <div class="form-input">Nhập tên món</div>
+      <div class="form-input">Giá dự kiến</div>
+      <div id="btn-add" class="button">Thêm món</div>
+    </div>
+
+    <div class="filters" aria-label="Lọc danh sách mua sắm">
+      <div class="button active">Tất cả</div>
+      <div class="button">Chưa mua</div>
+      <div class="button">Đã mua</div>
+    </div>
+
+    <div id="item-list" class="item-list" aria-label="Các món cần mua">
+      <div class="item">
+        <div class="item-label"><div class="checkbox"></div><div class="item-name">Sữa
+            tươi</div></div>
+        <div class="item-price">32.000 <div class="currency">đ</div></div>
+        <div class="button delete" aria-label="Xóa Sữa tươi">Xóa</div>
+      </div>
+      <div id="completed-items" class="item">
+        <div class="item-label"><div class="checkbox checked"></div><div class="item-name">Trứng
+            gà</div></div>
+        <div class="item-price">45.000 <div class="currency">đ</div></div>
+        <div class="button delete" aria-label="Xóa Trứng gà">Xóa</div>
+      </div>
+      <div class="item">
+        <div class="item-label"><div class="checkbox"></div><div class="item-name">Rau
+            cải</div></div>
+        <div class="item-price">18.000 <div class="currency">đ</div></div>
+        <div class="button delete" aria-label="Xóa Rau cải">Xóa</div>
+      </div>
+      <div class="item">
+        <div class="item-label"><div class="checkbox"></div><div class="item-name">Bánh
+            mì</div></div>
+        <div class="item-price">20.000 <div class="currency">đ</div></div>
+        <div class="button delete" aria-label="Xóa Bánh mì">Xóa</div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="remaining"><div>Còn <div class="emphasis">3</div> món chưa mua</div></div>
+      <div>Tổng dự kiến: <div class="emphasis total">70.000 <div class="currency">đ</div></div></div>
+    </div>
+  </div>
+</body>
+
+</html>
